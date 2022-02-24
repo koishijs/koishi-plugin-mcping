@@ -2,7 +2,7 @@
   "name": "koishi-plugin-mcping",
   "description": "Ping a Minecraft Server in Koishi",
   "private": true,
-  "version": "1.0.0",
+  "version": "2.0.0",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "files": [
@@ -14,7 +14,10 @@
   "keywords": [
     "chatbot",
     "koishi",
-    "plugin"
+    "plugin",
+    "minecraft",
+    "ping",
+    "status"
   ],
   "peerDependencies": {
     "koishi": "^4.2.0"
