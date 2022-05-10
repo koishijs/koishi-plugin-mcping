@@ -30,6 +30,9 @@
     "status"
   ],
   "peerDependencies": {
-    "koishi": "^4.2.0"
+    "koishi": "^4.6.1"
+  },
+  "dependencies": {
+    "ping-minecraft-server": "^1.0.1"
   }
 }

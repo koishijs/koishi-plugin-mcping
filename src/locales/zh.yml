@@ -1,0 +1,13 @@
+commands:
+  mcping:
+    description: 查看 Minecraft 服务器信息
+    messages:
+      invalid-url: 请输入正确的网址。
+      connect-error: 无法获取服务器信息，请确认输入的地址。
+      connect-timeout: 服务器响应超时，请确认输入的地址。
+      unknown-error: 发生了未知错误。
+      parse-error: 无法解析服务器信息。
+      description: 简介：{0}
+      overview: |
+        版本：{version.name}
+        人数：{players.online} / {players.max}
