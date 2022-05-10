@@ -1,12 +1,15 @@
-import { Context, Schema, segment } from 'koishi'
+import { Context, Schema, segment, Time } from 'koishi'
 import ping from 'ping-minecraft-server'
 
-export interface Config {}
+export interface Config extends ping.Options {}
 
 export const name = 'mcping'
-export const Config: Schema<Config> = Schema.object({})
 
-export function apply(ctx: Context) {
+export const Config: Schema<Config> = Schema.object({
+  timeout: Schema.number().role('time').default(Time.second * 5).description('最长请求时间。'),
+})
+
+export function apply(ctx: Context, config: Config) {
   ctx.i18n.define('zh', require('./locales/zh'))
 
   ctx.command('mcping <url>')
@@ -24,8 +27,7 @@ export function apply(ctx: Context) {
       }
 
       try {
-        const status = await ping(host, port)
-        if (!status.version) return session.text('.parse-error')
+        const status = await ping(host, port, config)
         const output = [session.text('.overview', status)]
         if (status.description) {
           let text = status.description.text
