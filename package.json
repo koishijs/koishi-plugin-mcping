@@ -12,12 +12,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/koishijs/koishi-plugin-baidu.git"
+    "url": "git+https://github.com/koishijs/koishi-plugin-mcping.git"
   },
   "bugs": {
-    "url": "https://github.com/koishijs/koishi-plugin-baidu/issues"
+    "url": "https://github.com/koishijs/koishi-plugin-mcping/issues"
   },
-  "homepage": "https://github.com/koishijs/koishi-plugin-baidu",
+  "homepage": "https://github.com/koishijs/koishi-plugin-mcping",
   "scripts": {
     "build": "tsc -b"
   },
