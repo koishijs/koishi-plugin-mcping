@@ -1,7 +1,7 @@
 {
   "name": "koishi-plugin-mcping",
   "description": "Ping a Minecraft Server in Koishi",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "files": [
@@ -29,8 +29,17 @@
     "ping",
     "status"
   ],
+  "koishi": {
+    "description": {
+      "en": "Ping Minecraft servers",
+      "zh": "查看 Minecraft 服务器状态"
+    },
+    "locales": [
+      "zh"
+    ]
+  },
   "peerDependencies": {
-    "koishi": "^4.6.1"
+    "koishi": "^4.7.2"
   },
   "dependencies": {
     "ping-minecraft-server": "^1.0.1"
